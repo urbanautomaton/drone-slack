@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"log"
+	"strings"
 
 	"github.com/urfave/cli"
 )
@@ -179,6 +180,7 @@ func run(c *cli.Context) error {
 			Author:   c.String("commit.author"),
 			Pull:     c.String("commit.pull"),
 			Message:  c.String("commit.message"),
+			Title:    strings.Split(c.String("commit.message"), "\n")[0],
 			DeployTo: c.String("build.deployTo"),
 			Link:     c.String("build.link"),
 			Started:  c.Int64("build.started"),

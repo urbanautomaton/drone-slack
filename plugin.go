@@ -24,6 +24,7 @@ type (
 		Author   string
 		Pull     string
 		Message  string
+		Title    string
 		DeployTo string
 		Status   string
 		Link     string
